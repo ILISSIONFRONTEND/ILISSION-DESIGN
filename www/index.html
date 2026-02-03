@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ILISSION DESIGN</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+
+<style>
+:root{
+  --bg:#0b0b0b;
+  --card:#141414;
+  --yellow:#ffc400;
+  --text:#fff;
+  --muted:#9a9a9a;
+}
+
+*{box-sizing:border-box;margin:0;padding:0;font-family:'Inter',sans-serif}
+
+body{
+  background:radial-gradient(circle at top,#1a1a1a,#000);
+  color:var(--text);
+}
+
+/* animations */
+@keyframes fadeUp{
+  from{opacity:0;transform:translateY(20px)}
+  to{opacity:1;transform:translateY(0)}
+}
+@keyframes pulse{
+  0%{box-shadow:0 0 0 rgba(255,196,0,0)}
+  50%{box-shadow:0 0 35px rgba(255,196,0,.6)}
+  100%{box-shadow:0 0 0 rgba(255,196,0,0)}
+}
+
+/* layout */
+.container{
+  max-width:480px;
+  margin:0 auto;
+  padding:60px 16px 80px;
+  animation:fadeUp .8s ease forwards;
+}
+
+h1{
+  font-size:28px;
+  font-weight:800;
+  line-height:1.25;
+  text-align:center;
+}
+h1 span{color:var(--yellow)}
+
+p{
+  text-align:center;
+  font-size:14px;
+  color:var(--muted);
+  margin-top:14px;
+}
+
+.cta{
+  display:block;
+  width:fit-content;
+  margin:26px auto 0;
+  background:linear-gradient(135deg,#ffd500,#ffb800);
+  color:#000;
+  padding:16px 34px;
+  border-radius:999px;
+  font-weight:800;
+  text-decoration:none;
+  animation:pulse 2.2s infinite;
+}
+
+.triggers{
+  display:flex;
+  gap:10px;
+  justify-content:center;
+  flex-wrap:wrap;
+  margin-top:28px;
+}
+.trigger{
+  background:var(--card);
+  padding:10px 14px;
+  border-radius:14px;
+  font-size:12px;
+  color:var(--muted);
+}
+
+/* works */
+.section{
+  margin-top:56px;
+}
+.section h2{
+  font-size:22px;
+  font-weight:800;
+  text-align:center;
+}
+.section h2 span{color:var(--yellow)}
+
+.works{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:12px;
+  margin-top:20px;
+}
+.work{
+  background:#111;
+  border-radius:16px;
+  overflow:hidden;
+  position:relative;
+}
+.work img{
+  width:100%;
+  display:block;
+  transition:transform .3s ease;
+}
+.work:hover img{transform:scale(1.08)}
+.work::after{
+  content:"CTR ↑";
+  position:absolute;
+  bottom:8px;
+  right:8px;
+  background:rgba(0,0,0,.7);
+  color:var(--yellow);
+  font-size:10px;
+  padding:4px 7px;
+  border-radius:6px;
+}
+
+/* footer */
+.footer{
+  margin-top:60px;
+  text-align:center;
+}
+.footer p{
+  margin-bottom:14px;
+}
+</style>
+</head>
+
+<body>
+<div class="container">
+
+  <h1><span>ILISSION</span> DESIGN<br>превью, которые кликают</h1>
+  <p>Если превью не увеличивает CTR — это просто картинка</p>
+
+  <a href="https://t.me/ilission" class="cta">Написать мне</a>
+
+  <div class="triggers">
+    <div class="trigger">📈 Рост кликов</div>
+    <div class="trigger">🎯 Психология внимания</div>
+    <div class="trigger">⚡ Быстро</div>
+  </div>
+
+  <div class="section">
+    <h2>Подборка <span>работ</span></h2>
+
+    <div class="works">
+      <div class="work"><img src="preview1.jpg"></div>
+      <div class="work"><img src="preview2.jpg"></div>
+      <div class="work"><img src="preview3.jpg"></div>
+      <div class="work"><img src="preview4.jpg"></div>
+    </div>
+  </div>
+
+  <div class="footer">
+    <p>Хочешь, чтобы твои видео начали кликать?</p>
+    <a href="https://t.me/ilission" class="cta">Связаться</a>
+  </div>
+
+</div>
+</body>
+</html>
