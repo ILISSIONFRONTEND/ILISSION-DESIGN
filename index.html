@@ -23,7 +23,6 @@ body{
   color:var(--text);
 }
 
-/* animations */
 @keyframes fadeUp{
   from{opacity:0;transform:translateY(20px)}
   to{opacity:1;transform:translateY(0)}
@@ -34,12 +33,11 @@ body{
   100%{box-shadow:0 0 0 rgba(255,196,0,0)}
 }
 
-/* layout */
 .container{
   max-width:480px;
   margin:0 auto;
-  padding:60px 16px 80px;
-  animation:fadeUp .8s ease forwards;
+  padding:56px 16px 90px;
+  animation:fadeUp .7s ease forwards;
 }
 
 h1{
@@ -75,7 +73,7 @@ p{
   gap:10px;
   justify-content:center;
   flex-wrap:wrap;
-  margin-top:28px;
+  margin-top:26px;
 }
 .trigger{
   background:var(--card);
@@ -85,9 +83,9 @@ p{
   color:var(--muted);
 }
 
-/* works */
+/* sections */
 .section{
-  margin-top:56px;
+  margin-top:64px;
 }
 .section h2{
   font-size:22px;
@@ -95,12 +93,37 @@ p{
   text-align:center;
 }
 .section h2 span{color:var(--yellow)}
+.section .desc{
+  font-size:13px;
+  margin-top:10px;
+}
 
+/* cards */
+.cards{
+  display:grid;
+  gap:14px;
+  margin-top:22px;
+}
+.card{
+  background:var(--card);
+  padding:18px;
+  border-radius:18px;
+}
+.card h3{
+  font-size:15px;
+  font-weight:700;
+}
+.card p{
+  font-size:13px;
+  margin-top:8px;
+}
+
+/* works */
 .works{
   display:grid;
   grid-template-columns:1fr 1fr;
   gap:12px;
-  margin-top:20px;
+  margin-top:22px;
 }
 .work{
   background:#111;
@@ -128,10 +151,11 @@ p{
 
 /* footer */
 .footer{
-  margin-top:60px;
+  margin-top:70px;
   text-align:center;
 }
 .footer p{
+  font-size:14px;
   margin-bottom:14px;
 }
 </style>
@@ -140,32 +164,96 @@ p{
 <body>
 <div class="container">
 
-  <h1><span>ILISSION</span> DESIGN<br>превью, которые кликают</h1>
-  <p>Если превью не увеличивает CTR — это просто картинка</p>
+<!-- HERO -->
+<h1><span>ILISSION</span> DESIGN<br>превью, которые кликают</h1>
+<p>Я делаю YouTube-превью, которые повышают CTR и вытаскивают видео из жопы рекомендаций</p>
 
-  <a href="https://t.me/ilission" class="cta">Написать мне</a>
+<a href="https://t.me/USERNAME" class="cta">Написать мне</a>
 
-  <div class="triggers">
-    <div class="trigger">📈 Рост кликов</div>
-    <div class="trigger">🎯 Психология внимания</div>
-    <div class="trigger">⚡ Быстро</div>
-  </div>
+<div class="triggers">
+  <div class="trigger">📈 CTR</div>
+  <div class="trigger">🧠 Психология</div>
+  <div class="trigger">⚡ Быстро</div>
+</div>
 
-  <div class="section">
-    <h2>Подборка <span>работ</span></h2>
+<!-- FOR WHO -->
+<div class="section">
+  <h2>Кому <span>подойдёт</span></h2>
+  <p class="desc">Если узнаёшь себя — нам по пути</p>
 
-    <div class="works">
-      <div class="work"><img src="preview1.jpg"></div>
-      <div class="work"><img src="preview2.jpg"></div>
-      <div class="work"><img src="preview3.jpg"></div>
-      <div class="work"><img src="preview4.jpg"></div>
+  <div class="cards">
+    <div class="card">
+      <h3>📉 Мало кликов</h3>
+      <p>Видео нормальные, но превью не цепляют — CTR ниже нормы</p>
+    </div>
+    <div class="card">
+      <h3>🎨 Красиво ≠ эффективно</h3>
+      <p>Устал от дизайнеров, которые делают «эстетику», а не результат</p>
+    </div>
+    <div class="card">
+      <h3>🚀 Хочешь рост</h3>
+      <p>Нужно увеличить просмотры без изменения контента</p>
     </div>
   </div>
+</div>
 
-  <div class="footer">
-    <p>Хочешь, чтобы твои видео начали кликать?</p>
-    <a href="https://t.me/ilission" class="cta">Связаться</a>
+<!-- HOW -->
+<div class="section">
+  <h2>Как <span>работаем</span></h2>
+
+  <div class="cards">
+    <div class="card">
+      <h3>1️⃣ Анализ</h3>
+      <p>Тематика, ЦА, конкуренты, формат видео</p>
+    </div>
+    <div class="card">
+      <h3>2️⃣ Превью</h3>
+      <p>Делаю превью под внимание, эмоцию и интригу</p>
+    </div>
+    <div class="card">
+      <h3>3️⃣ Результат</h3>
+      <p>CTR выше → больше показов → больше просмотров</p>
+    </div>
   </div>
+</div>
+
+<!-- WORKS -->
+<div class="section">
+  <h2>Примеры <span>работ</span></h2>
+
+  <div class="works">
+    <div class="work"><img src="preview1.jpg"></div>
+    <div class="work"><img src="preview2.jpg"></div>
+    <div class="work"><img src="preview3.jpg"></div>
+    <div class="work"><img src="preview4.jpg"></div>
+  </div>
+</div>
+
+<!-- WHY ME -->
+<div class="section">
+  <h2>Почему <span>я</span></h2>
+
+  <div class="cards">
+    <div class="card">
+      <h3>🎯 Думаю как зритель</h3>
+      <p>Превью делаются под реакцию, а не под дизайн-сообщество</p>
+    </div>
+    <div class="card">
+      <h3>📊 Фокус на CTR</h3>
+      <p>Главный KPI — клики, а не «нравится»</p>
+    </div>
+    <div class="card">
+      <h3>⚡ Без воды</h3>
+      <p>Быстро, по задаче, без 10 правок ради вкуса</p>
+    </div>
+  </div>
+</div>
+
+<!-- FINAL -->
+<div class="footer">
+  <p>Хочешь превью, которое реально будут кликать?</p>
+  <a href="https://t.me/USERNAME" class="cta">Обсудить задачу</a>
+</div>
 
 </div>
 </body>
