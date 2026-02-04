@@ -22,6 +22,20 @@
   <title>ILISSION DESIGN</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
+<script>
+const reveals = document.querySelectorAll('.reveal');
+
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if(entry.isIntersecting){
+      entry.target.classList.add('show');
+    }
+  });
+},{threshold:0.15});
+
+reveals.forEach(r => observer.observe(r));
+</script>
+
 <body>
 
 <header class="hero">
